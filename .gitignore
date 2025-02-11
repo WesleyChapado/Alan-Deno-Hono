@@ -1,0 +1,26 @@
+*.sqlite
+# Deno
+deno.json
+deno.jsonc
+*.lock
+
+# Diretórios e arquivos de cache
+.cache/
+deps/
+*.tsbuildinfo
+
+# Arquivos de compilação
+*.js
+*.d.ts
+*.map
+
+# Editor backups
+*.swp
+*.swo
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de logs
+*.log
