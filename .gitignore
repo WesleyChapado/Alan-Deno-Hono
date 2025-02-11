@@ -13,6 +13,8 @@ deps/
 *.js
 *.d.ts
 *.map
+*.mp3
+*.mp4
 
 # Editor backups
 *.swp
