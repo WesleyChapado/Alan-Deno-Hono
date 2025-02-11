@@ -1,12 +1,13 @@
-import { Context, Next } from "https://deno.land/x/hono/mod.ts";
+import { Context, Next } from 'hono';
 
 export const authGuard = (permissions: string[]) => {
-  console.log(permissions);
   return async (c: Context, next: Next) => {
+    // Your authentication logic here
     const authHeader = c.req.header("Authorization");
+    const hasPermission = permissions.every(permission => authHeader?.includes(permission));
 
-    if (!authHeader || authHeader !== "Bearer 12345") {
-      return c.json({ message: "Acesso negado!" }, 401);
+    if (!hasPermission) {
+      return c.text('Forbidden', 403);
     }
 
     await next();

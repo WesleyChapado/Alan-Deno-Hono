@@ -15,5 +15,5 @@ export const addUser = async (c: Context) => {
   }
 
   createUser(parsedData.data.name, parsedData.data.email);
-  return c.json({ message: "Usuário criado!" });
+  return c.json({ message: "Usuário criado!" }, 201);
 };
